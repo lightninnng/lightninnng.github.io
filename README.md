@@ -26,7 +26,7 @@ The homepage uses the supplied information and is entirely in English:
 - **Public contact email:** h-luo26@mails.tsinghua.edu.cn
 - **GitHub:** https://github.com/lightninnng
 - **Master's education:** September 2026–Present; Civil and Hydraulic Engineering, Tsinghua University
-- **Bachelor's education:** September 2022–June 2026; Bachelor of Engineering in Civil Engineering, Southwest Jiaotong University, School of Civil Engineering
+- **Bachelor's education:** September 2022–June 2026; Bachelor of Engineering, Civil Engineering, Southwest Jiaotong University, School of Civil Engineering
 - **Research interests:** Civil Engineering; Artificial Intelligence for Engineering; Structural Response Prediction
 
 No personal information needs replacing before deployment. The education dates include the corrected undergraduate end date of June 2026. Publications currently read: “Publications will be updated here.” Update this section only when actual publication information is available.
