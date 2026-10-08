@@ -1,0 +1,6 @@
+# Local preview and browser-check artifacts
+output/
+.playwright-cli/
+__pycache__/
+.DS_Store
+Thumbs.db
