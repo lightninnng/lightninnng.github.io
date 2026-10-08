@@ -186,7 +186,7 @@ Once the public page is working, use **https://lightninnng.github.io/** as the p
 
 ## Maintain the homepage
 
-Edit `index.html` to update your biography, education, interests, contact details, or publications. Edit `style.css` to adjust the appearance. Preview the page locally, then commit and push:
+Edit `index.html` to update your biography, education, interests, contact details, or publications. Edit `style.css` to adjust the appearance. After changing CSS, increase the version in the stylesheet link in `index.html` (for example, `style.css?v=2` to `style.css?v=3`) so returning visitors receive the updated styles. Preview the page locally, then commit and push:
 
 ```powershell
 git add index.html style.css

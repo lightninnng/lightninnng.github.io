@@ -1,9 +1,11 @@
 :root {
   color-scheme: light;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  color: #242b33;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #292a2d;
   background: #fff;
-  line-height: 1.65;
+  line-height: 1.7;
+  --muted: #606166;
+  --accent: #66364d;
 }
 
 * {
@@ -13,30 +15,52 @@
 body {
   margin: 0;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .page {
-  width: min(100%, 52rem);
-  margin: 3.5rem auto 4rem;
-  padding: 0 2rem;
+  width: min(100%, 62rem);
+  margin: 4.5rem auto 5rem;
+  padding: 0 2.5rem;
+}
+
+.profile,
+.overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  column-gap: 4rem;
 }
 
 .profile {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #263746;
-}
-
-h1,
-h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #1b2835;
-  font-weight: 400;
+  align-items: end;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid #d9dadd;
 }
 
 h1 {
-  margin: 0 0 0.75rem;
-  font-size: 2.8rem;
-  line-height: 1.2;
+  margin: 0 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  color: #222326;
+}
+
+h2 {
+  margin: 0 0 1.05rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: #242528;
+}
+
+h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 p {
@@ -44,115 +68,159 @@ p {
 }
 
 .position {
-  margin-bottom: 0.25rem;
-  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-size: 1.0625rem;
+  color: var(--muted);
 }
 
-.section {
-  display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: 1.5rem;
-  padding: 1.65rem 0;
-  border-bottom: 1px solid #e2e6e9;
+.affiliation {
+  font-size: 0.9375rem;
+  line-height: 1.75;
 }
 
-.section:last-child {
-  border-bottom: 0;
-}
-
-h2 {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-
-h3 {
-  margin: 0 0 0.15rem;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.65;
+.university {
+  color: var(--accent);
 }
 
 a {
-  color: #174c75;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  color: var(--accent);
+  text-decoration-color: #c1aeb7;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24em;
   overflow-wrap: anywhere;
 }
 
 a:hover {
-  color: #102f49;
+  color: #3f2030;
+  text-decoration-color: currentColor;
 }
 
 a:focus-visible {
-  outline: 2px solid #174c75;
-  outline-offset: 4px;
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.contact h2 {
+  margin-bottom: 0.75rem;
 }
 
 .contact-list {
   margin: 0;
-}
-
-.contact-list > div {
-  display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
-  gap: 0.75rem;
+  font-size: 0.9375rem;
 }
 
 .contact-list > div + div {
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
 }
 
 dt {
-  color: #515b64;
+  font-size: 0.875rem;
+  color: var(--muted);
 }
 
 dd {
   margin: 0;
 }
 
+.overview {
+  margin-top: 2.75rem;
+}
+
+.about p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
 .research-list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
 }
 
 .research-list li + li {
-  margin-top: 0.2rem;
+  margin-top: 0.55rem;
+}
+
+.research-list li::marker {
+  color: #9d838f;
+  font-size: 0.75em;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.education-entry {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1.5rem;
 }
 
 .education-entry + .education-entry {
-  margin-top: 1.4rem;
+  margin-top: 1.65rem;
 }
 
 .dates {
-  margin-bottom: 0.25rem;
-  color: #515b64;
-  font-size: 0.9rem;
+  padding-top: 0.15rem;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.education-details {
+  font-size: 0.9375rem;
 }
 
 .school {
-  color: #515b64;
+  margin-top: 0.15rem;
+  color: var(--muted);
 }
 
-@media (max-width: 42rem) {
+.publications p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+@media (max-width: 48rem) {
   .page {
-    margin: 2rem auto;
-    padding: 0 1.25rem;
+    margin: 2.5rem auto 3.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .profile,
+  .overview {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.75rem;
+    margin-bottom: 0.8rem;
   }
 
   .profile {
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .overview {
+    margin-top: 2rem;
   }
 
   .section {
+    margin-top: 2.5rem;
+  }
+
+  .education-entry {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-    padding: 1.4rem 0;
+    gap: 0.4rem;
+  }
+
+  .dates {
+    padding-top: 0;
   }
 }
 
@@ -163,8 +231,10 @@ dd {
     padding: 0;
   }
 
-  .section,
-  .education-entry {
+  .profile,
+  .overview,
+  .education-entry,
+  .publications {
     break-inside: avoid;
   }
 }
