@@ -8,6 +8,7 @@ A personal academic homepage built with HTML and CSS. It presents Hai Luo's name
 .
 ├── index.html    # Homepage content and metadata
 ├── style.css     # Responsive layout and typography
+├── photo.jpg     # Personal portrait, displayed beside the name
 ├── .nojekyll     # Serve the static files without Jekyll processing
 ├── .gitignore    # Keep local preview artifacts out of Git
 └── README.md     # Preview, deployment, and maintenance instructions
@@ -86,7 +87,7 @@ git config user.email "3102054116@qq.com"
 Review and commit the website files:
 
 ```powershell
-git add index.html style.css README.md .nojekyll .gitignore
+git add index.html style.css README.md .nojekyll .gitignore photo.jpg
 git diff --cached
 git commit -m "Create academic homepage"
 ```
@@ -166,7 +167,7 @@ After the files have been pushed to `main`:
 5. Check the repository's **Actions** tab for the Pages deployment result.
 6. Open [https://lightninnng.github.io/](https://lightninnng.github.io/) after deployment succeeds.
 
-`index.html`, `style.css`, and `.nojekyll` must be in the selected branch's root directory. No custom workflow or framework configuration is required. See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+`index.html`, `style.css`, `photo.jpg`, and `.nojekyll` must be in the selected branch's root directory. No custom workflow or framework configuration is required. See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 The empty `.nojekyll` file disables the default Jekyll processing for this static site. See [GitHub's static-site instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
@@ -186,10 +187,10 @@ Once the public page is working, use **https://lightninnng.github.io/** as the p
 
 ## Maintain the homepage
 
-Edit `index.html` to update your biography, education, interests, contact details, or publications. Edit `style.css` to adjust the appearance. After changing CSS, increase the version in the stylesheet link in `index.html` (for example, `style.css?v=2` to `style.css?v=3`) so returning visitors receive the updated styles. Preview the page locally, then commit and push:
+Edit `index.html` to update your biography, education, interests, contact details, or publications. Edit `style.css` to adjust the appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in `index.html` (for example, `style.css?v=3` to `style.css?v=4`) so returning visitors receive the updated styles. Preview the page locally, then commit and push:
 
 ```powershell
-git add index.html style.css
+git add index.html style.css photo.jpg
 git commit -m "Update academic homepage"
 git push
 ```
