@@ -285,6 +285,12 @@ dd {
   white-space: nowrap;
 }
 
+.thesis-title {
+  grid-column: 1 / -1;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
 .publications p {
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
@@ -326,6 +332,10 @@ html:lang(zh-CN) .about p {
 
 html:lang(zh-CN) .publications p {
   font-family: inherit;
+  font-style: normal;
+}
+
+html:lang(zh-CN) .thesis-title cite {
   font-style: normal;
 }
 

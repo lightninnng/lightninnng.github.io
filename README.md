@@ -30,7 +30,8 @@ Both language versions use the supplied information:
 - **Master's education:** September 2026–Present; Civil and Hydraulic Engineering, Tsinghua University
 - **Bachelor's education:** September 2022–June 2026; Bachelor of Engineering, Civil Engineering, Southwest Jiaotong University, School of Civil Engineering
 - **Undergraduate academic rank:** 2/505 (top 0.40%)
-- **Undergraduate honors:** Si-Shi-Yang-Hua Medal; Excellent Graduate of Sichuan Province; Scholarship for Gratitude to Modern Chinese Scientists (8th edition); National Scholarship for three consecutive years; Three Good Student Model, Southwest Jiaotong University, for three consecutive years
+- **Undergraduate honors:** Si-Shi-Yang-Hua Medal; Excellent Top 100 Graduation Design (Thesis), Southwest Jiaotong University (2026); Excellent Graduate of Sichuan Province; Scholarship for Gratitude to Modern Chinese Scientists (8th edition); National Scholarship for three consecutive years; Three Good Student Model, Southwest Jiaotong University, for three consecutive years
+- **Undergraduate thesis:** Rapid Prediction of Structural Response of Key Components of Offshore Bridges Based on Deep Learning / 基于深度学习的海上桥梁关键构件结构响应快速预测
 - **Research interests:** Civil Engineering; Artificial Intelligence for Engineering; Structural Response Prediction
 
 No personal information needs replacing before deployment. The education dates include the corrected undergraduate end date of June 2026. Publications currently read: “Publications will be updated here.” Update this section only when actual publication information is available.
@@ -191,7 +192,7 @@ Once the public page is working, use **https://lightninnng.github.io/** as the p
 
 ## Maintain the homepage
 
-Edit both `index.html` and `zh.html` when updating your biography, education, interests, contact details, or publications, keeping the two versions consistent. The English page remains the default homepage for OpenReview. Edit `style.css` to adjust the shared appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in both HTML files (for example, `style.css?v=6` to `style.css?v=7`) so returning visitors receive the updated styles. Preview both pages locally, then commit and push:
+Edit both `index.html` and `zh.html` when updating your biography, education, interests, contact details, or publications, keeping the two versions consistent. The English page remains the default homepage for OpenReview. Edit `style.css` to adjust the shared appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in both HTML files (for example, `style.css?v=7` to `style.css?v=8`) so returning visitors receive the updated styles. Preview both pages locally, then commit and push:
 
 ```powershell
 git add index.html zh.html style.css README.md photo.jpg
