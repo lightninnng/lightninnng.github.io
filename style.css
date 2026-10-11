@@ -263,14 +263,19 @@ dd {
   margin-top: 0.55rem;
 }
 
+.honors-list .medal-honor {
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: baseline;
+}
+
 .honor-title:only-child {
   grid-column: 1 / -1;
 }
 
 .honor-note {
-  grid-column: 1 / -1;
   font-size: 0.875rem;
   color: var(--muted);
+  text-align: right;
 }
 
 .honor-detail {
@@ -403,6 +408,10 @@ html:lang(zh-CN) .publications p {
     gap: 0;
   }
 
+  .honors-list .medal-honor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .honors-list li + li {
     margin-top: 0.7rem;
   }
@@ -413,6 +422,7 @@ html:lang(zh-CN) .publications p {
 
   .honor-note {
     line-height: 1.75;
+    text-align: left;
   }
 }
 

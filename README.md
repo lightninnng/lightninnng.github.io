@@ -191,7 +191,7 @@ Once the public page is working, use **https://lightninnng.github.io/** as the p
 
 ## Maintain the homepage
 
-Edit both `index.html` and `zh.html` when updating your biography, education, interests, contact details, or publications, keeping the two versions consistent. The English page remains the default homepage for OpenReview. Edit `style.css` to adjust the shared appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in both HTML files (for example, `style.css?v=5` to `style.css?v=6`) so returning visitors receive the updated styles. Preview both pages locally, then commit and push:
+Edit both `index.html` and `zh.html` when updating your biography, education, interests, contact details, or publications, keeping the two versions consistent. The English page remains the default homepage for OpenReview. Edit `style.css` to adjust the shared appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in both HTML files (for example, `style.css?v=6` to `style.css?v=7`) so returning visitors receive the updated styles. Preview both pages locally, then commit and push:
 
 ```powershell
 git add index.html zh.html style.css README.md photo.jpg
