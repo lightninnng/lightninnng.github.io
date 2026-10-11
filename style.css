@@ -4,8 +4,9 @@
   color: #292a2d;
   background: #fff;
   line-height: 1.7;
-  --muted: #606166;
+  --muted: #646367;
   --accent: #66364d;
+  --rule: #e4e1e3;
 }
 
 * {
@@ -19,8 +20,8 @@ body {
 }
 
 .page {
-  width: min(100%, 62rem);
-  margin: 3rem auto 5rem;
+  width: min(100%, 60rem);
+  margin: 2.75rem auto 4.5rem;
   padding: 0 2.5rem;
 }
 
@@ -29,7 +30,7 @@ body {
   justify-content: flex-end;
   align-items: baseline;
   gap: 0.6rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   font-size: 0.875rem;
   color: #a0a0a4;
 }
@@ -41,28 +42,25 @@ body {
 
 .language-switch a[aria-current="page"] {
   color: var(--accent);
+  text-decoration: underline;
 }
 
 .language-switch a:hover {
   text-decoration: underline;
 }
 
-.profile,
-.overview {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  column-gap: 4rem;
-}
-
 .profile {
-  align-items: end;
-  padding-bottom: 2.75rem;
-  border-bottom: 1px solid #d9dadd;
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  column-gap: 3.5rem;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
 }
 
 .identity {
   display: grid;
-  grid-template-columns: 8.25rem minmax(0, 1fr);
+  grid-template-columns: 7.25rem minmax(0, 1fr);
   gap: 1.75rem;
   align-items: center;
 }
@@ -75,26 +73,26 @@ body {
 }
 
 h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 3.75rem;
+  font-size: 3.4rem;
   font-weight: 400;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.035em;
   line-height: 1.1;
   color: #222326;
 }
 
 h2 {
-  margin: 0 0 1.05rem;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.4;
-  color: #242528;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--accent);
 }
 
 h3 {
-  margin: 0 0 0.25rem;
+  margin: 0;
   font-size: 1.0625rem;
   font-weight: 600;
   line-height: 1.5;
@@ -105,8 +103,8 @@ p {
 }
 
 .position {
-  margin-bottom: 0.6rem;
-  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -139,6 +137,10 @@ a:focus-visible {
 
 .contact h2 {
   margin-bottom: 0.75rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #292a2d;
 }
 
 .contact-list {
@@ -147,11 +149,11 @@ a:focus-visible {
 }
 
 .contact-list > div + div {
-  margin-top: 0.6rem;
+  margin-top: 0.7rem;
 }
 
 dt {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--muted);
 }
 
@@ -159,17 +161,17 @@ dd {
   margin: 0;
 }
 
-.overview {
-  margin-top: 2.75rem;
-}
-
 .about p {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.125rem;
+  font-size: 1.09375rem;
   line-height: 1.8;
 }
 
 .research-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.25rem 2rem;
   margin: 0;
   padding-left: 1rem;
   font-size: 0.9375rem;
@@ -177,7 +179,7 @@ dd {
 }
 
 .research-list li + li {
-  margin-top: 0.55rem;
+  margin-top: 0;
 }
 
 .research-list li::marker {
@@ -186,27 +188,40 @@ dd {
 }
 
 .section {
-  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 7.25rem minmax(0, 1fr);
+  column-gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 
-.education-entry {
-  display: grid;
-  grid-template-columns: 9.5rem minmax(0, 1fr);
-  gap: 1.5rem;
+.section > h2 {
+  padding-top: 0.05rem;
 }
 
 .education-entry + .education-entry {
-  margin-top: 1.65rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.education-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
 }
 
 .dates {
-  padding-top: 0.15rem;
+  flex-shrink: 0;
   font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .education-details {
+  margin-top: 0.4rem;
   font-size: 0.9375rem;
 }
 
@@ -216,7 +231,7 @@ dd {
 }
 
 .academic-rank {
-  margin-top: 0.85rem;
+  margin-top: 0.8rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -225,41 +240,50 @@ dd {
 }
 
 .honors-heading {
-  margin: 1.15rem 0 0.65rem;
+  margin: 1.3rem 0 0.65rem;
   font-size: 0.9375rem;
   font-weight: 500;
+  color: var(--muted);
 }
 
 .honors-list {
   margin: 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style: none;
   line-height: 1.75;
 }
 
-.honors-list li + li {
-  margin-top: 0.5rem;
+.honors-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.1rem 1.25rem;
 }
 
-.honors-list li::marker {
-  color: #9d838f;
-  font-size: 0.75em;
+.honors-list li + li {
+  margin-top: 0.55rem;
+}
+
+.honor-title:only-child {
+  grid-column: 1 / -1;
 }
 
 .honor-note {
-  display: block;
-  margin-top: 0.1rem;
+  grid-column: 1 / -1;
   font-size: 0.875rem;
   color: var(--muted);
 }
 
 .honor-detail {
+  align-self: baseline;
+  font-size: 0.875rem;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .publications p {
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -267,37 +291,42 @@ html:lang(zh-CN) {
   font-family: "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
-html:lang(zh-CN) h1,
-html:lang(zh-CN) .about p,
-html:lang(zh-CN) .publications p {
-  font-family: "Songti SC", SimSun, serif;
-}
-
 html:lang(zh-CN) h1 {
-  letter-spacing: 0.04em;
+  font-family: "Songti SC", SimSun, serif;
+  letter-spacing: 0.08em;
 }
 
 html:lang(zh-CN) h2 {
-  letter-spacing: 0.03em;
+  font-family: inherit;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+html:lang(zh-CN) .about p {
+  font-family: inherit;
+  font-size: 1.0625rem;
+  line-height: 1.9;
 }
 
 .english-name {
   display: block;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: 1.4;
   color: var(--muted);
 }
 
 html:lang(zh-CN) .publications p {
+  font-family: inherit;
   font-style: normal;
 }
 
 @media (max-width: 48rem) {
   .page {
-    margin: 1.5rem auto 3.5rem;
+    margin: 1.5rem auto 3rem;
     padding: 0 1.5rem;
   }
 
@@ -305,15 +334,14 @@ html:lang(zh-CN) .publications p {
     margin-bottom: 1.5rem;
   }
 
-  .profile,
-  .overview {
+  .profile {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 2rem;
   }
 
   h1 {
-    font-size: 2.75rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.85rem;
+    margin-bottom: 0.7rem;
   }
 
   .profile {
@@ -325,32 +353,81 @@ html:lang(zh-CN) .publications p {
     gap: 1.25rem;
   }
 
-  .overview {
-    margin-top: 2rem;
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .contact-list > div + div {
+    margin-top: 0;
   }
 
   .section {
-    margin-top: 2.5rem;
-  }
-
-  .education-entry {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.4rem;
+    row-gap: 0.9rem;
+    margin-top: 2.25rem;
   }
 
-  .dates {
+  .section > h2 {
     padding-top: 0;
+  }
+
+  .research-list {
+    display: block;
+  }
+
+  .research-list li + li {
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  .contact-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .education-entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .education-details {
+    margin-top: 0.5rem;
+  }
+
+  .honors-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .honors-list li + li {
+    margin-top: 0.7rem;
+  }
+
+  .honor-detail {
+    white-space: normal;
+  }
+
+  .honor-note {
+    line-height: 1.75;
   }
 }
 
 @media (max-width: 23rem) {
+  .page {
+    padding: 0 1.25rem;
+  }
+
   .identity {
-    grid-template-columns: 5.5rem minmax(0, 1fr);
+    grid-template-columns: 5rem minmax(0, 1fr);
     gap: 1rem;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.65rem;
   }
 }
 
@@ -366,7 +443,6 @@ html:lang(zh-CN) .publications p {
   }
 
   .profile,
-  .overview,
   .education-entry,
   .publications {
     break-inside: avoid;
