@@ -30,7 +30,7 @@ Both language versions use the supplied information:
 - **Master's education:** September 2026–Present; Civil and Hydraulic Engineering, Tsinghua University
 - **Bachelor's education:** September 2022–June 2026; Bachelor of Engineering, Civil Engineering, Southwest Jiaotong University, School of Civil Engineering
 - **Undergraduate academic rank:** 2/505 (top 0.40%)
-- **Undergraduate honors:** Si-Shi-Yang-Hua Medal; Excellent Top 100 Graduation Design (Thesis), Southwest Jiaotong University (2026); Excellent Graduate of Sichuan Province; Scholarship for Gratitude to Modern Chinese Scientists (8th edition); National Scholarship for three consecutive years; Three Good Student Model, Southwest Jiaotong University, for three consecutive years
+- **Undergraduate honors:** Si-Shi-Yang-Hua Medal; Excellent Top 100 Undergraduate Graduation Design (Thesis), Southwest Jiaotong University (2026); Excellent Graduate of Sichuan Province; Scholarship for Gratitude to Modern Chinese Scientists (8th edition); National Scholarship for three consecutive years; Three Good Student Model, Southwest Jiaotong University, for three consecutive years
 - **Undergraduate thesis:** Rapid Prediction of Structural Response of Key Components of Offshore Bridges Based on Deep Learning / 基于深度学习的海上桥梁关键构件结构响应快速预测
 - **Research interests:** Civil Engineering; Artificial Intelligence for Engineering; Structural Response Prediction
 
