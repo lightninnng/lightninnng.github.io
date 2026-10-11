@@ -1,12 +1,13 @@
 # Hai Luo — Academic Homepage
 
-A personal academic homepage built with HTML and CSS. It presents Hai Luo's name, university, graduate school, and university email directly on the public page, so they are easy to find when visiting the homepage for identity verification.
+A bilingual personal academic homepage built with HTML and CSS. The English and Chinese pages present Hai Luo's name, university, graduate school, and university email directly, so they are easy to find when visiting the homepage for identity verification. A small language switch links the two static pages.
 
 ## Project files
 
 ```text
 .
-├── index.html    # Homepage content and metadata
+├── index.html    # English homepage and metadata (default)
+├── zh.html       # Chinese homepage and metadata
 ├── style.css     # Responsive layout and typography
 ├── photo.jpg     # Personal portrait, displayed beside the name
 ├── .nojekyll     # Serve the static files without Jekyll processing
@@ -18,9 +19,9 @@ There is no JavaScript, framework, package installation, database, or backend. T
 
 ## Personal information
 
-The homepage uses the supplied information and is entirely in English:
+Both language versions use the supplied information:
 
-- **Name:** Hai Luo
+- **Name:** Hai Luo / 罗海
 - **University:** Tsinghua University
 - **Graduate school:** Tsinghua Shenzhen International Graduate School
 - **Position:** Master's Student
@@ -28,6 +29,8 @@ The homepage uses the supplied information and is entirely in English:
 - **GitHub:** https://github.com/lightninnng
 - **Master's education:** September 2026–Present; Civil and Hydraulic Engineering, Tsinghua University
 - **Bachelor's education:** September 2022–June 2026; Bachelor of Engineering, Civil Engineering, Southwest Jiaotong University, School of Civil Engineering
+- **Undergraduate academic rank:** 2/505 (top 0.40%)
+- **Undergraduate honors:** Si-Shi-Yang-Hua Medal; Excellent Graduate of Sichuan Province; Scholarship for Gratitude to Modern Chinese Scientists (8th edition); National Scholarship for three consecutive years; Pacemaker to Merit Student of SWJTU for three consecutive years
 - **Research interests:** Civil Engineering; Artificial Intelligence for Engineering; Structural Response Prediction
 
 No personal information needs replacing before deployment. The education dates include the corrected undergraduate end date of June 2026. Publications currently read: “Publications will be updated here.” Update this section only when actual publication information is available.
@@ -36,7 +39,7 @@ The Git commit email `3102054116@qq.com` is separate from the university contact
 
 ## Local preview
 
-Open `index.html` directly in any modern browser. Check both a wide desktop window and a narrow phone-sized window.
+Open `index.html` directly in any modern browser, or preview `zh.html` for Chinese. To check language switching, use the local server below. Check both a wide desktop window and a narrow phone-sized window.
 
 Optionally, if Python is installed, run the following in the project directory:
 
@@ -52,10 +55,9 @@ Then open [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Press `Ctrl+C` in th
 - **Repository name:** `lightninnng.github.io`
 - **Repository:** [lightninnng/lightninnng.github.io](https://github.com/lightninnng/lightninnng.github.io)
 - **Website after deployment:** [https://lightninnng.github.io/](https://lightninnng.github.io/)
+- **Chinese version:** [https://lightninnng.github.io/zh.html](https://lightninnng.github.io/zh.html)
 
 This repository name creates a GitHub user site at the account's root Pages URL. Make the repository **Public**. See [GitHub's guide to creating a Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
-
-The URLs above identify the intended deployment destination; this README does not assert that a push or deployment has already succeeded.
 
 ## Push to GitHub
 
@@ -87,7 +89,7 @@ git config user.email "3102054116@qq.com"
 Review and commit the website files:
 
 ```powershell
-git add index.html style.css README.md .nojekyll .gitignore photo.jpg
+git add index.html zh.html style.css README.md .nojekyll .gitignore photo.jpg
 git diff --cached
 git commit -m "Create academic homepage"
 ```
@@ -167,7 +169,7 @@ After the files have been pushed to `main`:
 5. Check the repository's **Actions** tab for the Pages deployment result.
 6. Open [https://lightninnng.github.io/](https://lightninnng.github.io/) after deployment succeeds.
 
-`index.html`, `style.css`, `photo.jpg`, and `.nojekyll` must be in the selected branch's root directory. No custom workflow or framework configuration is required. See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+`index.html`, `zh.html`, `style.css`, `photo.jpg`, and `.nojekyll` must be in the selected branch's root directory. No custom workflow or framework configuration is required. See [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 The empty `.nojekyll` file disables the default Jekyll processing for this static site. See [GitHub's static-site instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
@@ -182,15 +184,17 @@ Open the website in a private browser window without signing in to GitHub. Confi
 - **h-luo26@mails.tsinghua.edu.cn** appears as readable text in Contact and links to the same email address.
 - The layout remains readable on a phone.
 - The GitHub link opens the correct account.
+- The English / 中文 links switch between the two versions and indicate the current language.
+- The Chinese page is accessible at `https://lightninnng.github.io/zh.html` and displays the same education, rank, honors, and contact information.
 
 Once the public page is working, use **https://lightninnng.github.io/** as the personal homepage URL on OpenReview. Public visibility provides the requested identity information; OpenReview's registration review remains its own process.
 
 ## Maintain the homepage
 
-Edit `index.html` to update your biography, education, interests, contact details, or publications. Edit `style.css` to adjust the appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in `index.html` (for example, `style.css?v=3` to `style.css?v=4`) so returning visitors receive the updated styles. Preview the page locally, then commit and push:
+Edit both `index.html` and `zh.html` when updating your biography, education, interests, contact details, or publications, keeping the two versions consistent. The English page remains the default homepage for OpenReview. Edit `style.css` to adjust the shared appearance. Replace `photo.jpg` to update your portrait; the current image is shown at its original 3:4 aspect ratio. After changing CSS, increase the version in the stylesheet link in both HTML files (for example, `style.css?v=4` to `style.css?v=5`) so returning visitors receive the updated styles. Preview both pages locally, then commit and push:
 
 ```powershell
-git add index.html style.css photo.jpg
+git add index.html zh.html style.css README.md photo.jpg
 git commit -m "Update academic homepage"
 git push
 ```
